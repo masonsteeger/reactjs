@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import Aux from '../../../hoc/Aux'
+import Aux from '../../../hoc/Aux/Aux'
 import Button from '../../UI/Button/Button'
 
 class OrderSummary extends Component {
-    
+
     componentDidUpdate() {
         console.log('[OrderSummary] updated')
     }
