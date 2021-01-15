@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Switch, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter, NavLink, Switch, Redirect, Route } from 'react-router-dom';
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
 
@@ -19,8 +19,8 @@ class App extends Component {
             <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
           </ol>
           <nav style={{textAlign: 'center',display: 'flex', justifyContent: 'space-around'}}>
-            <Link to='/users'>Users</Link>
-            <Link to='/courses'>Courses</Link>
+            <NavLink to='/users'>Users</NavLink>
+            <NavLink to='/courses'>Courses</NavLink>
           </nav>
           <Switch>
             <Route path='/users' component={Users} />
