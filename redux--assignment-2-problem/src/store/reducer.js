@@ -7,9 +7,14 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type){
         case actionTypes.ADD_PERSON:
+            const newPerson = {
+                id: Math.random(), // not really unique but good enough here!
+                name: 'Mason',
+                age: Math.floor( Math.random() * 40 )
+            }
             return {
                 ...state,
-                persons: state.persons.concat({id: action.payload.id, name:action.payload.name, age: action.payload.age})
+                persons: state.persons.concat({id: newPerson.id, name:newPerson.name, age: newPerson.age})
             }
         case actionTypes.DELETE_PERSON:
             const newPersons = state.persons.filter((person)=> person.id !== action.id)
